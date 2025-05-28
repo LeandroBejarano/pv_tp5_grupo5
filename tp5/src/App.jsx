@@ -14,7 +14,7 @@ function App() {
     curso: '',
     email: '',
     domicilio: '',
-    teléfono: '',
+    telefono: '',
   })
   const [alumnos, setAlumnos] = useState([]);
   return (
