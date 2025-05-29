@@ -1,3 +1,25 @@
+const styles = {
+  tabla: {
+    width: '100%',
+    borderCollapse: 'collapse',
+    margin: '20px 0',
+    backgroundColor: '#fff',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+  },
+  th: {
+    backgroundColor: '#1e3a8a',
+    color: '#fff',
+    padding: '12px 16px',
+    textAlign: 'left'
+  },
+  td: {
+    padding: '12px 16px',
+    borderBottom: '1px solid #e2e8f0',
+  }
+};
+
 function Tabla({alumnos}) {
     return (
         <table>
