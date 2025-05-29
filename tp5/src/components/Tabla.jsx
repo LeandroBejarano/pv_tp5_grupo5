@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function Tabla({alumnos}) {
     return (
         <table>
@@ -10,11 +12,12 @@ function Tabla({alumnos}) {
                     <th>Curso</th>
                     <th>Telefono</th>
                     <th>Domicilio</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                {alumnos.map((a,i) => (
-                    <tr key={i}>
+                {alumnos.map((a) => (
+                    <tr key={a.lu}>
                         <td>{a.lu}</td>
                         <td>{a.nombre}</td>
                         <td>{a.apellido}</td>
@@ -22,6 +25,7 @@ function Tabla({alumnos}) {
                         <td>{a.curso}</td>
                         <td>{a.telefono}</td>
                         <td>{a.domicilio}</td>
+                        <td><Link to={`/lista/${a.lu}/editar`}>Editar</Link></td>
                     </tr>
                 ))}
             </tbody>
