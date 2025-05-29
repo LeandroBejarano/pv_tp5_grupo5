@@ -13,6 +13,7 @@ function Tabla({alumnos}) {
                     <th>Telefono</th>
                     <th>Domicilio</th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +27,7 @@ function Tabla({alumnos}) {
                         <td>{a.telefono}</td>
                         <td>{a.domicilio}</td>
                         <td><Link to={`/lista/${a.lu}/editar`}>Editar</Link></td>
+                        <td><Link to={`/lista/${a.lu}`}>Ver</Link></td>
                     </tr>
                 ))}
             </tbody>
