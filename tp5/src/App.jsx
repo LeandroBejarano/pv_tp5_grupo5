@@ -34,7 +34,7 @@ function App() {
             <Route path='/' element={<Navigate to='/inicio'/>}></Route>
             <Route path='/inicio' element={<Inicio/>}></Route>
             <Route path='/nuevo' element={<NuevoAlumno alumnos={[alumnos,setAlumnos]} alumno={[alumno, setAlumno]}/>}></Route>
-            <Route path='/lista' element={<ListaAlumnos alumnos={alumnos}/>}></Route>
+            <Route path='/lista' element={<ListaAlumnos alumnos={alumnos} setAlumnos={setAlumnos}/>}></Route>
             <Route path='/lista/:id' element={<VerAlumno alumnos={alumnos}/>}></Route>
             <Route path='/lista/:id/editar' element={<EditarAlumno alumnos={[alumnos, setAlumnos]} />}> </Route>
             <Route path='/acerca' element={<AcercaDe/>}></Route>

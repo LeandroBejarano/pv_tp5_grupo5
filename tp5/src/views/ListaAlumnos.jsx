@@ -6,7 +6,7 @@ function ListaAlumnos(props) {
         {props.alumnos.length === 0 ? (
             <h1>No hay alumnos registrados</h1>
         ) : (
-            <Tabla alumnos={props.alumnos} />
+            <Tabla alumnos={props.alumnos} setAlumnos={props.setAlumnos} />
         )}
         </div>
     )
