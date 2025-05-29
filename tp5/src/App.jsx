@@ -5,6 +5,7 @@ import ListaAlumnos from './views/ListaAlumnos';
 import Inicio from './views/Inicio';
 import NuevoAlumno from './views/NuevoAlumno';
 import AcercaDe from './views/AcercaDe';
+import EditarAlumno from './views/EditarAlumno';
 
 function App() {
   const [alumno, setAlumno] = useState({
@@ -33,6 +34,7 @@ function App() {
             <Route path='/inicio' element={<Inicio/>}></Route>
             <Route path='/nuevo' element={<NuevoAlumno alumnos={[alumnos,setAlumnos]} alumno={[alumno, setAlumno]}/>}></Route>
             <Route path='/lista' element={<ListaAlumnos alumnos={alumnos}/>}></Route>
+            <Route path='/lista/:id/editar' element={<EditarAlumno alumnos={[alumnos, setAlumnos]} />}> </Route>
             <Route path='/acerca' element={<AcercaDe/>}></Route>
           </Routes>
         </BrowserRouter>
