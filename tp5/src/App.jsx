@@ -8,6 +8,7 @@ import AcercaDe from './views/AcercaDe';
 import EditarAlumno from './views/EditarAlumno';
 import VerAlumno from './views/VerAlumno';
 import NavBar from './components/NavBar';
+import alumnosDefault from './components/alumnosDefault';
 
 function App() {
   const [alumno, setAlumno] = useState({
@@ -19,7 +20,7 @@ function App() {
     domicilio: '',
     telefono: '',
   });
-  const [alumnos, setAlumnos] = useState([]);
+  const [alumnos, setAlumnos] = useState(alumnosDefault());
 
   const linkStyle = {
     textDecoration: 'none',
