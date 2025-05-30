@@ -78,19 +78,19 @@ function NuevoAlumno(props) {
 
   return (
     <div style={{
-         display: 'flex',
-         flexDirection: 'column',
-         alignItems: 'center',
-         justifyContent: 'center',
-         minHeight: '100vh',
-         width: '100vw',
-         backgroundColor: '#e0f7fa'
-        }}>
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      width: '100vw',
+      backgroundColor: '#e0f7fa'
+    }}>
       <h1 style={styles.title}>Registro de Alumno</h1>
       <form style={styles.form} onSubmit={handleAlumno}>
         <input style={styles.input} value={alumno.nombre} type='text' onChange={(e) => setAlumno({ ...alumno, nombre: e.target.value })} placeholder='Nombres...' />
         <input style={styles.input} value={alumno.apellido} type='text' onChange={(e) => setAlumno({ ...alumno, apellido: e.target.value })} placeholder='Apellido...' />
-        <input style={styles.input} value={alumno.email} type='text' onChange={(e) => setAlumno({ ...alumno, email: e.target.value })} placeholder='E-mail...' />
+        <input style={styles.input} value={alumno.email} type='email' onChange={(e) => setAlumno({ ...alumno, email: e.target.value })} placeholder='E-mail...' />
         <input style={styles.input} value={alumno.curso} type='text' onChange={(e) => setAlumno({ ...alumno, curso: e.target.value })} placeholder='Curso...' />
         <input style={styles.input} value={alumno.domicilio} type='text' onChange={(e) => setAlumno({ ...alumno, domicilio: e.target.value })} placeholder='Domicilio...' />
         <input style={styles.input} value={alumno.telefono} type='number' onChange={(e) => setAlumno({ ...alumno, telefono: e.target.value })} placeholder='Teléfono...' />
