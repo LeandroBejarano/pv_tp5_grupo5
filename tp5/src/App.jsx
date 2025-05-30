@@ -21,15 +21,15 @@ function App() {
   const [alumnos, setAlumnos] = useState([]);
 
   const navContainer = {
-  padding: '20px',
-  backgroundColor: '#e0f7f7',
-  display: 'flex',
-  flexDirection: 'row', 
-  justifyContent: 'center', 
-  gap: '40px', 
-  fontSize: '18px',
-  fontWeight: 'bold',
-};
+    padding: '20px',
+    backgroundColor: '#e0f7f7',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: '40px',
+    fontSize: '18px',
+    fontWeight: 'bold',
+  };
 
   const linkStyle = {
     textDecoration: 'none',
@@ -48,11 +48,13 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path='/' element={<Navigate to='/inicio' />} />
-          <Route path='/inicio' element={<Inicio />} />
-          <Route path='/nuevo' element={<NuevoAlumno alumnos={[alumnos, setAlumnos]} alumno={[alumno, setAlumno]} />} />
-          <Route path='/lista' element={<ListaAlumnos alumnos={alumnos} />} />
-          <Route path='/acerca' element={<AcercaDe />} />
+          <Route path='/' element={<Navigate to='/inicio' />}></Route>
+          <Route path='/inicio' element={<Inicio />}></Route>
+          <Route path='/nuevo' element={<NuevoAlumno alumnos={[alumnos, setAlumnos]} alumno={[alumno, setAlumno]} />}></Route>
+          <Route path='/lista' element={<ListaAlumnos alumnos={alumnos} setAlumnos={setAlumnos} />}></Route>
+          <Route path='/lista/:id' element={<VerAlumno alumnos={alumnos} />}></Route>
+          <Route path='/lista/:id/editar' element={<EditarAlumno alumnos={[alumnos, setAlumnos]} />}> </Route>
+          <Route path='/acerca' element={<AcercaDe />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
