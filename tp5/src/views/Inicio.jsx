@@ -1,7 +1,13 @@
-function Inicio (){
+import welcome from '../assets/welcome.png'
+function Inicio() {
     return (
-        <div>
-            <h1>Inicio</h1>
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            height: '100vh',
+            width: '100vw',
+        }}>
+            <img src={welcome} alt="index" style={{ display: 'block', margin: '0 auto' }} />
         </div>
     )
 }
