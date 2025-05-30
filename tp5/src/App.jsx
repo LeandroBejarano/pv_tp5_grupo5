@@ -7,6 +7,7 @@ import NuevoAlumno from './views/NuevoAlumno';
 import AcercaDe from './views/AcercaDe';
 import EditarAlumno from './views/EditarAlumno';
 import VerAlumno from './views/VerAlumno';
+import NavBar from './components/NavBar';
 
 function App() {
   const [alumno, setAlumno] = useState({
@@ -20,17 +21,6 @@ function App() {
   });
   const [alumnos, setAlumnos] = useState([]);
 
-  const navContainer = {
-    padding: '20px',
-    backgroundColor: '#e0f7f7',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: '40px',
-    fontSize: '18px',
-    fontWeight: 'bold',
-  };
-
   const linkStyle = {
     textDecoration: 'none',
     color: '#3b82f6',
@@ -40,12 +30,12 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <nav style={navContainer}>
+        <NavBar>
           <Link to='/inicio' style={linkStyle}>Página Principal</Link>
           <Link to='/nuevo' style={linkStyle}>Registrar alumno</Link>
           <Link to='/lista' style={linkStyle}>Lista de alumnos</Link>
           <Link to='/acerca' style={linkStyle}>Acerca de nosotros</Link>
-        </nav>
+        </NavBar>
 
         <Routes>
           <Route path='/' element={<Navigate to='/inicio' />}></Route>
