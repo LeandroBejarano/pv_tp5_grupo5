@@ -21,15 +21,15 @@ function App() {
   const [alumnos, setAlumnos] = useState([]);
 
   const navContainer = {
-    padding: '20px',
-    backgroundColor: '#e0f7f7',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '12px',
-    fontSize: '18px',
-    fontWeight: 'bold',
-  };
+  padding: '20px',
+  backgroundColor: '#e0f7f7',
+  display: 'flex',
+  flexDirection: 'row', 
+  justifyContent: 'center', 
+  gap: '40px', 
+  fontSize: '18px',
+  fontWeight: 'bold',
+};
 
   const linkStyle = {
     textDecoration: 'none',
@@ -38,7 +38,6 @@ function App() {
   };
 
   return (
- styles
     <div>
       <BrowserRouter>
         <nav style={navContainer}>
