@@ -5,6 +5,8 @@ import ListaAlumnos from './views/ListaAlumnos';
 import Inicio from './views/Inicio';
 import NuevoAlumno from './views/NuevoAlumno';
 import AcercaDe from './views/AcercaDe';
+import EditarAlumno from './views/EditarAlumno';
+import VerAlumno from './views/VerAlumno';
 
 function App() {
   const [alumno, setAlumno] = useState({
@@ -36,6 +38,7 @@ function App() {
   };
 
   return (
+ styles
     <div>
       <BrowserRouter>
         <nav style={navContainer}>
@@ -54,6 +57,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+
   );
 }
 

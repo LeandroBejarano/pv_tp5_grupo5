@@ -20,35 +20,35 @@ const styles = {
   }
 };
 
-function Tabla({alumnos}) {
-    return (
-        <table>
-            <thead>
-                <tr>
-                    <th>LU</th>
-                    <th>Nombre/s</th>
-                    <th>Apellido/s</th>
-                    <th>E-mail</th>
-                    <th>Curso</th>
-                    <th>Telefono</th>
-                    <th>Domicilio</th>
-                </tr>
-            </thead>
-            <tbody>
-                {alumnos.map((a,i) => (
-                    <tr key={i}>
-                        <td>{a.lu}</td>
-                        <td>{a.nombre}</td>
-                        <td>{a.apellido}</td>
-                        <td>{a.email}</td>
-                        <td>{a.curso}</td>
-                        <td>{a.telefono}</td>
-                        <td>{a.domicilio}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    )
+function Tabla({ alumnos }) {
+  return (
+    <table style={styles.tabla}>
+      <thead>
+        <tr>
+          <th style={styles.th}>LU</th>
+          <th style={styles.th}>Nombre</th>
+          <th style={styles.th}>Apellido</th>
+          <th style={styles.th}>E-mail</th>
+          <th style={styles.th}>Curso</th>
+          <th style={styles.th}>Teléfono</th>
+          <th style={styles.th}>Domicilio</th>
+        </tr>
+      </thead>
+      <tbody>
+        {alumnos.map((a) => (
+          <tr key={a.lu}>
+            <td style={styles.td}>{a.lu}</td>
+            <td style={styles.td}>{a.nombre}</td>
+            <td style={styles.td}>{a.apellido}</td>
+            <td style={styles.td}>{a.email}</td>
+            <td style={styles.td}>{a.curso}</td>
+            <td style={styles.td}>{a.telefono}</td>
+            <td style={styles.td}>{a.domicilio}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 }
 
-export default Tabla
+export default Tabla;
